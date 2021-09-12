@@ -7,8 +7,8 @@
 body{
     font-family: 'Work Sans', sans-serif;
 }
-/* start general */
-/* componant */
+
+/*start componant */
 .special-heading {
     color: #f5c9b8;
     font-size: 100px;
@@ -27,12 +27,13 @@ body{
     .special-heading { font-size: 60px;}
     .special-heading + p { margin-top: -20px; font-size: 13px;}
 }
-/* end general */
+/* end componant */
+
 /* start framework */
 .container {
     padding-left: 15px;
     padding-right: 15px;
-    width: 1400px;
+    width: 1300px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -62,12 +63,11 @@ body{
     }
 }
 
-:root{ --main-color:#f54343 }
+:root{ --main-color:#f54343; --secondary-color:#9c2727 }
 
 /* fin framework */
 
 /* start header */
-
 header {
     padding: 10px;
     background-color: #f4f4f4;
@@ -81,7 +81,7 @@ header .ligo {
     width: 60px;
 }
 i {
-    color: #9c2727;
+    color: var(--secondary-color);
     font-size: 30px;
 }
 i .nh {
@@ -106,7 +106,7 @@ header .links .icon {
     justify-content: flex-end;
 }
 header .links .icon span {
-    background-color: #9c2727;
+    background-color: var(--secondary-color);
     margin-bottom: 5px;
     height: 4px;
 }
@@ -153,12 +153,11 @@ header .links ul li a {
 header .links ul li a:hover {
     padding-left: 20px;
     background-color: var(--main-color);
-    box-shadow: 3px 2px 2px #f54242;
+    
 }
 header .links ul li:not(:last-child) a{
-    border-bottom: 1px solid #f54242;
+    border-bottom: 1px solid var(--secondary-color);
 }
-
 /* fin header  */
 
 /* start landing */
@@ -175,19 +174,19 @@ header .links ul li:not(:last-child) a{
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 500px;
     max-width: 100%;
     
 }
 .landing .intro-text h1 {
     margin: 0;
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bold;
     color: var(--main-color);
     text-shadow: -2px 0px #d49898;
 }
 .landing .intro-text p {
-    font-size: 20px;
+    font-size: 25px;
     line-height: 1.6;
     font-weight: bold;
     color: #f1e7e7;
@@ -230,5 +229,63 @@ header .links ul li:not(:last-child) a{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         grid-gap: 30px;
+        margin-top: 100px;
+}
+.services .services-content .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+    .services .services-content .srv {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.services .services-content .srv i {
+    flex-basis : 60px;
+}
+.services .services-content .srv .text {
+    flex: 1;
+}
+.services .services-content .srv .text h3 {
+    margin: 0 0 20px;
+}
+.services .services-content .srv .text p{
+    color: #444;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.services .services-content .image {
+    position: relative;
+    text-align: center;
+}
+
+.services .services-content .image::before {
+    content: "";
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: calc(100% + 100px);
+    top: -50px;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+.services .services-content .image img {
+    width: 260px;
+    box-shadow: 3px 2px 5px #aaa;
+}
+.services .services-content .image img:hover {
+    margin-right: 10px ;
+    box-shadow: 3px 2px 5px #aaa;
+}
+@media (max-width:1199px){
+    .image-column {
+        display: none;
+    }
 }
 /* end services */
+
+
+/* start portfolio */
+
+/* endportfolio */
