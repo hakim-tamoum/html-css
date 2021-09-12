@@ -1,2 +1,2 @@
 # html-css
-### templat one : https://github.com/hakim-tamoum/html-css
+### templat one : https://hakim-tamoum.github.io/html-css/
