@@ -63,14 +63,23 @@ body{
     }
 }
 
-:root{ --main-color:#f54343; --secondary-color:#9c2727 }
+:root{
+    --main-color:#f54343;
+    --secondary-color:#9c2727;
+    --background-color:#e6e6e6
+}
+
+.espace {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 
 /* fin framework */
 
 /* start header */
 header {
     padding: 10px;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
 }
 header .container {
     display: flex;
@@ -121,7 +130,7 @@ header .links .icon span:last-child {
     width: 100%;
 }
 header .links ul {
-    background-color: #d6d6d6;
+    background-color: var(--background-color);
     box-shadow: 3px 2px 5px #aaa;
     list-style: none;
     margin: 0;
@@ -196,9 +205,7 @@ header .links ul li:not(:last-child) a{
 
 /* start features */
 .features {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
 }
 .features .container {
     display: grid;
@@ -221,10 +228,6 @@ header .links ul li:not(:last-child) a{
 /* end features */
 
 /* start services */
-.services {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
 .services .services-content {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -288,7 +291,21 @@ header .links ul li:not(:last-child) a{
 
 /* start portfolio */
 .portfolio {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    background-color: var(--background-color);
+}
+.portfolio .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 100px;
+}
+.portfolio .portfolio-content .card {
+    background-color:#fff
+}
+.portfolio .portfolio-content img{
+    width: 100%;
+}
+.portfolio .portfolio-content .info{
+    padding: 20px;
 }
 /* endportfolio */
