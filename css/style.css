@@ -308,4 +308,11 @@ header .links ul li:not(:last-child) a{
 .portfolio .portfolio-content .info{
     padding: 20px;
 }
+.portfolio .portfolio-content .info h3{
+    margin: 0px;
+}
+.portfolio .portfolio-content .info p{
+    color: #444;
+    line-height: 1.6;
+}
 /* endportfolio */
