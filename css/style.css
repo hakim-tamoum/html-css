@@ -319,5 +319,24 @@ header .links ul li:not(:last-child) a{
 
 /* start section about */
 .about {
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+.about .about-content {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.about .about-content .image {
+    position: relative;
+    width: 250px;
+    height: 375px;
+}
+.about .about-content .image::before {
+    content: "";
+}
+.about .about-content .image::after {
+    content: "";
 }
 /* end section about */
