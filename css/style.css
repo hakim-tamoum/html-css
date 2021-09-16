@@ -335,8 +335,18 @@ header .links ul li:not(:last-child) a{
 }
 .about .about-content .image::before {
     content: "";
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+    position: absolute;
+    z-index: -1;
 }
 .about .about-content .image::after {
     content: "";
+}
+.about .about-content .image img{
+    max-width: 100%;
 }
 /* end section about */
